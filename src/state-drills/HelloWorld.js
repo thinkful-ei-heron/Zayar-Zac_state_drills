@@ -6,22 +6,20 @@ export default class HelloWorld extends React.Component {
     who: ''
   };
   
-  whoHandler = (e, str) => {
+  whoHandler = str => {
 
     this.setState({
-
-      
-
+      who: str
     }
     )}
 
   render() {
     return (
       <div>
-        <p>Hello {this.state.who}!</p>
-        <button onClick={e => this.whoHandler('world')} id='btn-world'>World</button>
-        <button onClick={e => this.whoHandler('friend')} id='btn-friend'>Friend</button>
-        <button onClick={e => this.whoHandler('React')} id='btn-react'>React</button>
+        <p>Hello{this.state.who}!</p>
+        <button onClick={() => this.whoHandler(' world')} id='btn-world'>World</button>
+        <button onClick={() => this.whoHandler(' friend')} id='btn-friend'>Friend</button>
+        <button onClick={() => this.whoHandler(' React')} id='btn-react'>React</button>
       </div>
       )
     };
